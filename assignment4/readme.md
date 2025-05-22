@@ -1,77 +1,49 @@
-# Python File Operations Assignment
+```markdown
+# Python File Handling Assignment
 
-This repository contains two Python programs that demonstrate file operations and error handling as part of Assignment 4 for Module 5: Files, Exceptions, and Errors in Python.
+## Assignment 4 Solutions for Module 5
 
-## Programs
+This repository contains two Python programs demonstrating file operations and error handling techniques.
 
-### Task 1: Read a File and Handle Errors
+### Program 1: File Reader with Error Handling
+**Filename:** `assignment4_01.py`
 
-**File:** `assignment4_01.py`
+This program safely reads and displays the contents of 'sample.txt' with:
+- Line-by-line display with numbered output
+- Automatic file closing using context manager
+- Special handling for missing files
+- Clean error messages
 
-This program:
-1. Attempts to open and read a text file named `sample.txt`
-2. Prints its content with line numbers if the file exists
-3. Gracefully handles file not found errors and other exceptions
+**How to Use:**
+1. Create a 'sample.txt' file to test successful reading
+2. Run the program to see either the file contents or a "file not found" message
+3. No file modification occurs - read-only operation
 
-**Example Usage:**
-```
-python assignment4_01.py
+### Program 2: File Writer with Append Functionality
+**Filename:** `assignment4_02.py`
 
-# If file exists (sample.txt contains):
-# Hello
-# World
-# Python
+This interactive program handles file operations by:
+1. Taking user input for initial file content
+2. Writing content to 'output.txt' (creates new or overwrites existing)
+3. Taking additional input to append to the file
+4. Showing the final combined content
 
-Reading file content:
-Line 1: Hello
-Line 2: World
-Line 3: Python
+**Features:**
+- Clear success messages after each operation
+- Preserves existing content during append
+- Demonstrates all three file modes: write, append, and read
+- User-friendly output formatting
 
-# If file doesn't exist:
-Error: The file 'sample.txt' does not exist.
+**Usage Notes:**
+- Running multiple times will overwrite the initial content
+- Appended text adds to existing content
+- The program creates 'output.txt' if missing
 
-### Task 2: Write and Append Data to a File
+**Testing Recommendations:**
+1. Test with missing input file for Task 1
+2. Verify append functionality by running Task 2 multiple times
+3. Check special characters in input text
+4. Verify empty input handling
 
-**File:** `assignment4_02.py`
-
-This program:
-1. Takes user input and writes it to `output.txt` (overwrites existing content)
-2. Takes additional user input and appends it to the same file
-3. Reads and displays the final content of the file
-
-**Example Usage:**
-```
-python assignment4_02.py
-Enter text to write to the file: Hello World
-Enter additional text to append: This is additional text
-
-Final content of output.txt:
-Hello World
-This is additional text
-```
-
-## Requirements
-
-- Python 3.x
-- No additional packages required
-
-## How to Run
-
-1. Clone this repository
-2. Run each program separately:
-   ```
-   python assignment4_01.py
-   python assignment4_02.py
-   ```
-
-## Notes
-
-- For Task 1, you can create a `sample.txt` file to test the successful case
-- For Task 2, the program will create `output.txt` if it doesn't exist
-
-## Author
-ASHIL MASCARENHAS
-
-## License
-This project is open source and available under the [MIT License](LICENSE).
+Both programs follow Python best practices for file handling and include appropriate user feedback.
 ```
