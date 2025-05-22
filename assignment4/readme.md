@@ -1,4 +1,3 @@
-```markdown
 # Python File Operations Assignment
 
 This repository contains two Python programs that demonstrate file operations and error handling as part of Assignment 4 for Module 5: Files, Exceptions, and Errors in Python.
